@@ -177,7 +177,7 @@
             // btncong
             // 
             this.btncong.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncong.Location = new System.Drawing.Point(168, 109);
+            this.btncong.Location = new System.Drawing.Point(169, 109);
             this.btncong.Name = "btncong";
             this.btncong.Size = new System.Drawing.Size(47, 47);
             this.btncong.TabIndex = 6;
@@ -188,7 +188,7 @@
             // btntru
             // 
             this.btntru.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntru.Location = new System.Drawing.Point(169, 162);
+            this.btntru.Location = new System.Drawing.Point(170, 162);
             this.btntru.Name = "btntru";
             this.btntru.Size = new System.Drawing.Size(47, 47);
             this.btntru.TabIndex = 11;
@@ -247,6 +247,7 @@
             this.btnphantram.TabIndex = 17;
             this.btnphantram.Text = "%";
             this.btnphantram.UseVisualStyleBackColor = true;
+            this.btnphantram.Click += new System.EventHandler(this.btnphantram_Click);
             // 
             // btnbang
             // 
@@ -278,6 +279,7 @@
             this.btnnho.TabIndex = 1;
             this.btnnho.Text = "C";
             this.btnnho.UseVisualStyleBackColor = true;
+            this.btnnho.Click += new System.EventHandler(this.btnnho_Click);
             // 
             // btnxoa
             // 
@@ -321,7 +323,6 @@
             this.MaximizeBox = false;
             this.Name = "FrmMain";
             this.Text = "Calculator";
-            this.Click += new System.EventHandler(this.NhapPhepToan);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmMain_KeyPress);
             this.ResumeLayout(false);
 

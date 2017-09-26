@@ -99,6 +99,19 @@ namespace Calculator
                     break;
             }
         }
+
+        private void btnnho_Click(object sender, EventArgs e)
+        {
+            lblDisplay.Text = "0";
+            double = 0;   
+        }
+
+        private void btnphantram_Click(object sender, EventArgs e)
+        {
+            lblDisplay.Text = ((double.Parse(lblDisplay.Text)/100)).ToString();
+
+        }
+    }
     }
 }
 
