@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Calculator
 {
-    static class Program
+    static class Progra
     {
         /// <summary>
         /// The main entry point for the application.

@@ -79,6 +79,10 @@ namespace Calculator
         {
             Tinhketqua();
             isTypingNumber = false;
+            nho = 0;
+            pheptoan = PhepToan.None;
+           
+            
         }
 
         private void FrmMain_KeyPress(object sender, KeyPressEventArgs e)
@@ -102,16 +106,14 @@ namespace Calculator
 
         private void btnnho_Click(object sender, EventArgs e)
         {
-            lblDisplay.Text = "0";
-            double = 0;   
+            lblDisplay.Text = "0";             
         }
 
         private void btnphantram_Click(object sender, EventArgs e)
         {
-            lblDisplay.Text = ((double.Parse(lblDisplay.Text)/100)).ToString();
-
+            lblDisplay.Text = ((double.Parse(lblDisplay.Text)/100)).ToString()
         }
     }
     }
-}
+
 
