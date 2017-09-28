@@ -113,6 +113,23 @@ namespace Calculator
         {
             lblDisplay.Text = ((double.Parse(lblDisplay.Text)/100)).ToString()
         }
+
+        private void btncan_Click(object sender, EventArgs e)
+        {
+            lblDisplay.Text = (Math.Sqrt(Double.Parse(lblDisplay.Text))).ToString();
+        }
+
+        private void btndoidau_Click(object sender, EventArgs e)
+        {
+                lblDisplay.Text = (-1 * (double.Parse(lblDisplay.Text))).ToString();
+            }
+
+        private void btnxoa_Click(object sender, EventArgs e)
+        {
+            if (lblDisplay.Text.Length > 0)
+                lblDisplay.Text = lblDisplay.Text.Remove(lblDisplay.Text.Length - 1, 1);
+
+        }
     }
     }
 
