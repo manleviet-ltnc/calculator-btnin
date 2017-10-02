@@ -19,7 +19,7 @@ namespace Calculator
 
         bool isTypingNumber = false;
 
-        enum PhepToan { Cong, Tru, Nhan, Chia };
+        enum PhepToan {None, Cong, Tru, Nhan, Chia };
         PhepToan pheptoan;
 
         double nho;
@@ -33,7 +33,11 @@ namespace Calculator
         private void Nhapso(string so)
         {
             if (isTypingNumber)
-                lblDisplay.Text = lblDisplay.Text + so;
+            {
+                if (lblDisplay.Text == "0")
+                    lblDisplay.Text = "";
+                lblDisplay.Text += so;
+            }
             else
             {
                 lblDisplay.Text = so;
@@ -44,7 +48,8 @@ namespace Calculator
 
         private void NhapPhepToan(object sender, EventArgs e)
         {
-            Tinhketqua();
+            if (nho!=0)
+                Tinhketqua();
 
             Button btn = (Button)sender;
             switch (btn.Text)
@@ -106,12 +111,13 @@ namespace Calculator
 
         private void btnnho_Click(object sender, EventArgs e)
         {
-            lblDisplay.Text = "0";             
+            nho = 0;
+            lblDisplay.Text = "0.";             
         }
 
         private void btnphantram_Click(object sender, EventArgs e)
         {
-            lblDisplay.Text = ((double.Parse(lblDisplay.Text)/100)).ToString()
+            lblDisplay.Text = ((double.Parse(lblDisplay.Text) / 100)).ToString();
         }
 
         private void btncan_Click(object sender, EventArgs e)
